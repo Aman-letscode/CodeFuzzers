@@ -176,10 +176,21 @@ if($num>0)
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     -->
-    <div class="text-center">
-        <h4><b>Dashboard</b></h4>
-        <hr>
-    </div>
+    <br>
+    <div class="doctpatdashtop">
+        <div class="breadcrumps-section">
+          <div class="container my-4row">
+            <div class="col-md-12">
+              <h2>Dashboard</h2>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-items"><a href="index.html" class="text-dark">Home </a></li>
+                <li class="breadcrumb-items"><a href="logdoct.html" class="text-dark"> > Log in as doctor </a></li>
+                <li class="breadcrumb-items active"> > Patient Medical History</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="container">
 
         <div class="row">
