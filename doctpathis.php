@@ -243,9 +243,7 @@ foreach($items as $item){
                 </tbody>
             </table>
             <div class="row">
-            <div class="col-md-2">
-                <button type="button" class="btn btn-danger btn-sm"><a href="doctpatedit.html"><h4 class="text-white"><img src="edit2.png" height="25"> Edit</h4></a></button>
-                </div>
+           
                  
                 <div class="col-md-2">
                     <button type="button" class="btn btn-danger btn-sm"><a href="doctpatadd.html"><h4 class="text-white"><img src="add.png" height="25"> Add</h4></a></button>
