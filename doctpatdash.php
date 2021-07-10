@@ -125,7 +125,7 @@
               <h2>Dashboard</h2>
               <ol class="breadcrumb">
                 <li class="breadcrumb-items"><a href="index.html" class="text-dark">Home </a></li>
-                <li class="breadcrumb-items"><a href="logpat.html" class="text-dark"> > Log in as Patient </a></li>
+                <li class="breadcrumb-items"><a href="logdoct.html" class="text-dark"> > Log in as Doctor </a></li>
                 <li class="breadcrumb-items active"> > Patient Dashboard</li>
               </ol>
             </div>
