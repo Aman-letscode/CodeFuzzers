@@ -261,7 +261,7 @@
     <br>
     </div>
 
-        <h4 class="text-center">Click Here To view <button type="submit" class="btn btn-danger btn-sm"><a href="pathis.html"><h4 class="text-white">Medical History</h4></a></button> 
+        <h4 class="text-center">Click Here To view <button type="submit" class="btn btn-danger btn-sm"><a href="doctpathis.php"><h4 class="text-white">Medical History</h4></a></button> 
 
         <br>
         <br>
