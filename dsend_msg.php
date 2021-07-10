@@ -61,7 +61,7 @@ if (isset($_POST['otp_msg']))
 
   if($_COOKIE['otp'] == $otp)
   {
-    header('location: doctpatdash.html');
+    header('location: doctpatdash.php');
   }
   else{
       echo "incorrect otp";
