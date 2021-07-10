@@ -195,6 +195,20 @@ if($num>0)
 
         </div>
         <br>
+         
+              <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="his.png" height="150"> 
+             </div>
+    
+             <div class="col-md-4 text-center">
+                <img src="his1.png" height="150"> 
+             </div>
+    
+             <div class="col-md-4 text-center">
+                <img src="his2.jpg" height="150"> 
+             </div>
+    </div>
 
         <div>
             <table class="table">
