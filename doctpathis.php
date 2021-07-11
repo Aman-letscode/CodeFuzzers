@@ -141,9 +141,7 @@ if($num>0)
             </button>
         </div>
 
-        <div  class="col-md-5">
-            <h4 class="text-center"> <button type="submit" class="btn btn-danger btn-sm"><a href="doctpatmed.html"><h4 class="text-white">Medicines</h4></a></button> 
-        </div>
+        
 
         </div>
         <br>
