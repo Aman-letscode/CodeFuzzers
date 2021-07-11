@@ -1,29 +1,3 @@
-<?php
-include 'dbconnect.php';
-$sql = "SELECT * FROM `historyform`";
-$result = mysqli_query($conn,$sql);
-$num= mysqli_num_rows($result);
-
-
-// echo $num;
-if($num>0)
-{
-    
-
-    while($row = mysqli_fetch_assoc($result)){
-        $items[] = $row;
-    }
-    
-    $items = array_reverse($items ,true);
-    
-    
-
-
-
-}
-
-
- ?>
 <!doctype html>
 <html lang="en">
 
@@ -41,6 +15,31 @@ if($num>0)
         div.patdashtop{
           background-color: darkgray;
         }
+        input , textarea{
+    border: 2px solid black;
+    border-radius: 6px;
+    outline: none;
+    width: 80%;
+    margin: 11px;
+    font-size: 25px;
+    padding: 7px;
+}
+/* form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+.btn{
+    color: white;
+    background: purple;
+    padding: 10px 15px;
+    border: white;
+    border: 2px solid;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
       </style>
 
 </head>
@@ -142,9 +141,9 @@ if($num>0)
             </button>
         </div>
 
-        <div  class="col-md-5">
-            <h4 class="text-center"> <button type="submit" class="btn btn-warning btn-sm"><a href="patmed.php"><h4 class="text-white">Medicines</h4></a></button> 
-        </div>
+        <!-- <div  class="col-md-5">
+            <h4 class="text-center"> <button type="submit" class="btn btn-warning btn-sm"><a href="patmed.php"><h4 class="text-white">Add</h4></a></button> 
+        </div> -->
 
         </div>
         <br>
@@ -162,39 +161,48 @@ if($num>0)
          </div>
 </div>
         <div>
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Treatment</th>
-                        <th scope="col">Consulted By</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Prescriptions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php
-foreach($items as $item){
-    //    echo $item['date']." - ".$item['name']." - ".$item['treatment'];
-    //    echo "<br>";
+            <h1>Enter your Moblie number</h1>
+     <form action="" method="post">
+        <input type="phone" name="phone" id="phone" placeholder="Enter your contact number">
+        <button class="btn" name="search">Submit</button>
+     </form>
+     <?php
+            
 
-?>
+            $connection =mysqli_connect("remotemysql.com","MhPhYxUSqu","SqnTg1cKqC");
+            $db = mysqli_select_db($connection,'MhPhYxUSqu');
 
-                    <tr>
-                        <th scope="row"><?php echo $item['date'] ?></th>
-                        <td><?php echo $item['treatment'] ?></td>
-                        <td><?php echo $item['name'] ?></td>
-                        <td><?php echo $item['Status'] ?></td>
-                        <td><?php echo $item['Prescriptions'] ?></td>
-                        
-                        <td><?php echo '<a href=  "doc/"'.$item['Prescriptions'],'><img src="down.png" height="40"></a>'?></td>
-                    </tr>
+            if(isset($_POST['search']))
+            {
+                $id = $_POST['phone'];
+
+                $query ="SELECT * FROM `medhistory` WHERE phone='$id' ";
+                $query_run = mysqli_query($connection,$query);
+
+                while($row = mysqli_fetch_array($query_run))
+                {
+                    ?>
+                    <h2>
+                     
+                     Name -<?php echo $row['name']; ?><br>
+                     Treatment  -<?php echo $row['treatment']; ?><br>
+                     Status  -<?php echo $row['status']; ?><br>
+                     Prescription  -<?php echo $row['prescription']; ?><br>
+                     
+                     Treatment  -<?php echo $row['treatment']; ?><br>
+                     
+                     
+                     Phone  -<?php echo $row['phone']; ?><br>
+                     Date  -<?php echo $row['Date']; ?><br>
+                     </h2>
+                    
+
                     <?php
-   }
+                }
+            }
+            ?>
 
 
-  ?>                </tbody>
-            </table>
            
        
 
