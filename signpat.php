@@ -180,13 +180,11 @@ button:hover {
           
           
           <input type="phone" name="phone" id="phone" placeholder="Enter your contact number">
-          <button class="btn">Submit</button>
+          <div class="row mb-3 px-3"> 
+          <a href="logpat.php"><button type="submit" class="btn btn-dark p-md-1" name=send_msg value="otp" >  Submit</button> </div></a>
 
           
-      </form>
-      <a href="logpat.html">
-          <button class="bttn" a >After submitting , click here to login</button>
-          </a>
+</form>
  
      </div>
     <!--Finish Midsignup-->
@@ -297,20 +295,7 @@ button:hover {
 <?php
 include "dbconnect.php";
    if(isset($_POST['name']))
-   {
-//    {
-//     $servername = "localhost";
-// $username = "MhPhYxUSqu";
-// $password= "SqnTg1cKqC";
-
-
-// $conn = mysqli_connect($servername, $username, $password);
-
-// if(!$conn){
-//     die("Sorry Cannot Connect".mysqli_connect_error());
-// }
-    // echo "Success connecting to the db ";
-    
+   {    
     $name = $_POST['name'];
     $age = $_POST['age'];
     $gender = $_POST['gender'];
@@ -319,9 +304,6 @@ include "dbconnect.php";
     $treatment = $_POST['treatment'];
     
     $phone = $_POST['phone'];
-
-
-    
 
     $sql="INSERT INTO `MhPhYxUSqu`.`signup` (`name`, `age`, `gender`, `bloodgroup`, `treatment`, `phone`, `Date`) VALUES ('$name', '$age', '$gender', '$blood_group', '$treatment', '$phone', CURRENT_TIMESTAMP);";
 

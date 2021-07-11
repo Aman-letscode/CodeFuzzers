@@ -24,10 +24,6 @@ if($num>0)
 
 
  ?>
-
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -41,6 +37,11 @@ if($num>0)
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <title>Health Care Doc</title>
+    <style>
+        div.patdashtop{
+          background-color: darkgray;
+        }
+      </style>
 
 </head>
 
@@ -118,14 +119,14 @@ if($num>0)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     -->
     <br>
-    <div class="doctpatdashtop">
+    <div class="patdashtop">
         <div class="breadcrumps-section">
           <div class="container my-4row">
             <div class="col-md-12">
               <h2>Dashboard</h2>
               <ol class="breadcrumb">
                 <li class="breadcrumb-items"><a href="index.html" class="text-dark">Home </a></li>
-                <li class="breadcrumb-items"><a href="logdoct.html" class="text-dark"> > Log in as doctor </a></li>
+                <li class="breadcrumb-items"><a href="logpat.html" class="text-dark"> > Log in as patient </a></li>
                 <li class="breadcrumb-items active"> > Patient Medical History</li>
               </ol>
             </div>
@@ -142,29 +143,24 @@ if($num>0)
         </div>
 
         <div  class="col-md-5">
-            <h4 class="text-center"> <button type="submit" class="btn btn-danger btn-sm"><a href="doctpatmed.html"><h4 class="text-white">Medicines</h4></a></button> 
+            <h4 class="text-center"> <button type="submit" class="btn btn-warning btn-sm"><a href="patmed.php"><h4 class="text-white">Medicines</h4></a></button> 
         </div>
 
         </div>
         <br>
-         
-              <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="his.png" height="150"> 
-             </div>
-    
-             <div class="col-md-4 text-center">
-                <img src="his1.png" height="150"> 
-             </div>
-    
-             <div class="col-md-4 text-center">
-                <img src="his2.jpg" height="150"> 
-             </div>
-    </div>
-    <div class="col-md-2">
-                    <button type="button" class="btn btn-danger btn-sm"><a href="doctpatadd.php"><h4 class="text-white"><img src="add.png" height="25"> Add</h4></a></button>
-                </div>
-            </div>
+<div class="row">
+        <div class="col-md-4 text-center">
+            <img src="his.png" height="150"> 
+         </div>
+
+         <div class="col-md-4 text-center">
+            <img src="his1.png" height="150"> 
+         </div>
+
+         <div class="col-md-4 text-center">
+            <img src="his2.jpg" height="150"> 
+         </div>
+</div>
         <div>
             <table class="table">
                 <thead class="thead-dark">
@@ -177,7 +173,6 @@ if($num>0)
                     </tr>
                 </thead>
                 <tbody>
-                   
                 <?php
 foreach($items as $item){
     //    echo $item['date']." - ".$item['name']." - ".$item['treatment'];
@@ -198,16 +193,9 @@ foreach($items as $item){
    }
 
 
-  ?>
-
-
-                </tbody>
+  ?>                </tbody>
             </table>
-            <div class="row">
            
-                 
-                
-
        
 
         
@@ -215,7 +203,9 @@ foreach($items as $item){
         <hr><hr>
         <br>
 
-        <h4 class="text-center">Click Here To view <button type="submit" class="btn btn-danger btn-sm"><a href="doctpatdash.html"><h4 class="text-white">General Information</h4></a></button>
+       
+
+        <h4 class="text-center">Click Here To view <button type="submit" class="btn btn-danger btn-sm"><a href="patdash.php"><h4 class="text-white">General Information</h4></a></button>
        <br><br>
         <div class="text-center">
             <button type="submit" class="btn-success btn-sm"><a href="index.html"><h4 class="text-white">Log Out</h4></a></button>
