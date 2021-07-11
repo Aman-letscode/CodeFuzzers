@@ -295,16 +295,19 @@ button:hover {
   </body>
 </html>
 <?php
-   if(isset($_POST['name'])){
-    $server="localhost";
-    $username="root";
-    $password= "";
+include "dbconnect.php";
+   if(isset($_POST['name']))
+//    {
+//     $servername = "localhost";
+// $username = "MhPhYxUSqu";
+// $password= "SqnTg1cKqC";
 
-    $con = mysqli_connect($server, $username, $password);
 
-    if(!$con){
-        die("connection to this database failed due to".mysqli_connect_error());
-    }
+// $conn = mysqli_connect($servername, $username, $password);
+
+// if(!$conn){
+//     die("Sorry Cannot Connect".mysqli_connect_error());
+// }
     // echo "Success connecting to the db ";
     
     $name = $_POST['name'];
@@ -317,22 +320,20 @@ button:hover {
     $phone = $_POST['phone'];
 
 
-    // $sql="INSERT INTO `marriz`.`marriz` (`name`, `age`, `gender`, `bloodgroup`, `allergy`, `treatment`, `report`, `email`, `phone`, `dt`) VALUES ('$name', '$age', '$gender', '$blood_group', '$allergy', '$treatment', '$report', '$email', '$phone', current_timestamp());";
-     
+    
 
-    $sql="INSERT INTO `signup`.`signup` (`name`, `age`, `gender`, `bloodgroup`, `treatment`, `phone`, `Date`) VALUES ('$name', '$age', '$gender', '$blood_group', '$treatment', '$phone', current_timestamp());";
-    // echo $sql;
+    $sql="INSERT INTO `MhPhYxUSqu`.`signup` (`name`, `age`, `gender`, `bloodgroup`, `treatment`, `phone`, `Date`) VALUES ('$name', '$age', '$gender', '$blood_group', '$treatment', '$phone', CURRENT_TIMESTAMP);";
 
 
-    if($con->query($sql) == true){
-        // echo "Successfully inserted";
+    if($conn->query($sql) == true){
+        echo "Successfully inserted";
         echo '<span style="color:FF0000;text-align:center;">Request has been sent. Please wait for my reply!</span>';
         header('location: index.html');
     }
     else{
-        echo "ERROR: $sql <br> $con->error";
+        echo "ERROR: $sql <br> $conn->error";
     }
     
-    $con->close();
-}
+    $conn->close();
+
 ?>
