@@ -48,6 +48,9 @@ which includes prescription, treatment status etc.
 Doctor is having right to ADD the record of patient. 
 
 ********************************************************************************************************
+remotemysql:-https://remotemysql.com/phpmyadmin/db_structure.php?server=1&db=MhPhYxUSqu
+username = "MhPhYxUSqu";
+password= "SqnTg1cKqC";
 
 
 Hope You like our Idea!!!
