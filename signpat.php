@@ -297,6 +297,7 @@ button:hover {
 <?php
 include "dbconnect.php";
    if(isset($_POST['name']))
+   {
 //    {
 //     $servername = "localhost";
 // $username = "MhPhYxUSqu";
@@ -333,7 +334,7 @@ include "dbconnect.php";
     else{
         echo "ERROR: $sql <br> $conn->error";
     }
-    
+   }
     $conn->close();
 
 ?>
