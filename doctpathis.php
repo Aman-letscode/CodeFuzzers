@@ -41,6 +41,11 @@ if($num>0)
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <title>Health Care Doc</title>
+     <style>
+        div.doctpatdashtop{
+          background-color: darkgray;
+        }
+      </style>
 
 </head>
 
