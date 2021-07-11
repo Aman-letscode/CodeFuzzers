@@ -152,8 +152,8 @@
      <?php
             
 
-            $connection =mysqli_connect("localhost","root","");
-            $db = mysqli_select_db($connection,'signup');
+             $connection =mysqli_connect("remotemysql.com","MhPhYxUSqu","SqnTg1cKqC");
+            $db = mysqli_select_db($connection,'MhPhYxUSqu');
 
             if(isset($_POST['search']))
             {
